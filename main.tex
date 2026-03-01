@@ -1,0 +1,97 @@
+\documentclass[11pt]{report}
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{amsmath, amsfonts, amsthm, amssymb, fontspec}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{tabularx}
+\usepackage{xcolor} 
+\usepackage{anyfontsize}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{hyperref,cleveref,comment}
+\usepackage{mathtools}
+\usepackage{unicode-math}
+\usepackage{titlesec}
+\usepackage{verbatim}
+\usepackage{appendix}
+\usepackage{parskip}
+\usepackage[none]{hyphenat}
+\usepackage{enumitem}
+\usepackage{contour}
+\usepackage{ulem}
+\usepackage[most]{tcolorbox}
+\usepackage{fancyvrb}
+\usepackage{lastpage, cancel}
+\usepackage{derivative}
+%\usepackage{libertinus}
+%\usepackage{inconsolata} % for ciphertext / code
+%\usepackage{microtype}
+
+\usepackage{newpxtext,newpxmath}
+
+\usepackage[Conny]{fncychap}
+%Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
+\pagenumbering{arabic}
+\hypersetup{pdfborder=0 0 0}
+\setmathfont{NewComputerModernMath}[math-style=TeX,bold-style=upright]
+
+\newcommand{\mychapter}[2]{
+    \setcounter{chapter}{#1}
+    \setcounter{section}{0}
+    \chapter*{#2}
+    \addcontentsline{toc}{chapter}{#2}
+}
+
+\begin{document}
+
+
+\title{	Don’t Panic: A Codebreaker’s Guide to Getting Unstuck}
+\author{
+  Crackerjack \\
+}
+\date{\today}
+
+\maketitle
+
+\begin{abstract}
+
+\textit{The Hitchhiker's Guide to the Galaxy} is a book that is designed help its reader in a universe that is, by most reasonable standards, confusing and occasionally hostile. 
+
+This guide has far more modest ambitions, namely attempting to help you stay calm in front of a block of ciphertext. 
+
+If there is anything worth keeping in mind throughout the rest of this guide, it is the same one printed in large, friendly letters on the cover of the Hitchhiker's Guide: \textbf{Don't Panic}.
+
+\end{abstract}
+
+
+\chapter*{What this guide is (and isn't)}
+
+
+This is not a guide on how to break ciphers. 
+
+There are plenty of places one can go to learn the mechanics of codebreaking like how to run frequency analysis, or a hill-climb attack, or which button to press next in Python. If that's what you're looking for, this document will feel frustratingly indirect. 
+
+This is a guide on how to be a codebreaker. 
+
+It's about what to do before you know what cipher you're looking at, on how to think when nothing makes sense yet, about recognising process when there is no readable plaintext in sight, and staying functional and sane when you're stuck, because you will be. 
+
+Codebreaking, especially with something like the National Cipher Challenge, is rarely a neat sequence of steps. More often than not, it's long periods of uncertainty sprinkled with small insights that only feel obvious in hindsight. This guide focuses on the process, the reasoning, the framing, and the decision making that happens when you don't yet have all the answers. 
+
+Most of the difficulty in codebreaking comes from uncertainty like not knowing where to start, or whether you're making progress, and not knowing whether the idea you're attached to is actually helping. 
+
+In short, if you've ever stared at a block of ciphertext and thought to yourself, \textit{`I have no idea what I'm doing'}, then you're in the right place. 
+
+\tableofcontents 
+
+
+\part{Finding Your Feet}
+\input{Part I}
+
+\part{How to Think}
+\input{Part II}
+
+\part{Getting Unstuck}
+\input{Part III}
+
+
+
+\end{document}
