@@ -1,5 +1,5 @@
-\documentclass[11pt]{report}
-\usepackage[a4paper, margin=1in]{geometry}
+\documentclass[12pt]{report}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
 \usepackage{amsmath, amsfonts, amsthm, amssymb, fontspec}
 \usepackage{graphicx} % Required for inserting images
 \usepackage{tabularx}
@@ -9,7 +9,6 @@
 \usepackage{wrapfig}
 \usepackage{hyperref,cleveref,comment}
 \usepackage{mathtools}
-\usepackage{unicode-math}
 \usepackage{titlesec}
 \usepackage{verbatim}
 \usepackage{appendix}
@@ -32,7 +31,6 @@
 %Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
 \pagenumbering{arabic}
 \hypersetup{pdfborder=0 0 0}
-\setmathfont{NewComputerModernMath}[math-style=TeX,bold-style=upright]
 
 \newcommand{\mychapter}[2]{
     \setcounter{chapter}{#1}
@@ -54,11 +52,7 @@
 
 \begin{abstract}
 
-\textit{The Hitchhiker's Guide to the Galaxy} is a book that is designed help its reader in a universe that is, by most reasonable standards, confusing and occasionally hostile. 
-
-This guide has far more modest ambitions, namely attempting to help you stay calm in front of a block of ciphertext. 
-
-If there is anything worth keeping in mind throughout the rest of this guide, it is the same one printed in large, friendly letters on the cover of the Hitchhiker's Guide: \textbf{Don't Panic}.
+\textit{The Hitchhiker's Guide to the Galaxy} is a book that is designed help its reader in a universe that is, by most reasonable standards, confusing and occasionally hostile. This guide has far more modest ambitions, namely attempting to help you stay calm in front of a block of ciphertext. If there is anything worth keeping in mind throughout the rest of this guide, it is the same one printed in large, friendly letters on the cover of the Hitchhiker's Guide: \textbf{Don't Panic}.
 
 \end{abstract}
 
@@ -83,15 +77,42 @@ In short, if you've ever stared at a block of ciphertext and thought to yourself
 \tableofcontents 
 
 
-\part{Finding Your Feet}
-\input{Part I}
+\mychapter{1}{Being Stuck}
+\input{tex/01- Being Stuck}
 
-\part{How to Think}
-\input{Part II}
+\mychapter{2}{Redefining Progress}
+\input{tex/02- Redefining Progress}
 
-\part{Getting Unstuck}
-\input{Part III}
+\mychapter{3}{The Starting Line}
+\input{tex/03- The Starting Line}
+% Talk aot waht you need to get started? resoures? programming? dw 
+
+\mychapter{4}{Abandoning Ideas}
+\input{tex/04- Abandoning Ideas}
+% when to know that an idea isn't working, or isn't helpful.. 
+% ruling things out 
+
+\mychapter{5}{Using Context}
+\input{tex/05- Using Context}
+% how to use competition context 
+% value of the story 
+
+\mychapter{6}{Teamwork}
+% how to work well in a team? Identity strengths and divide work 
+% look after one another 
+
+\mychapter{7}{Tools and Resources}
+% Section on AI - link to competition AI policy? 
+% Posting on forum and related things 
+
+\mychapter{8}{General Tips}  
+% Look after yourself pls - sleep, etc. 
+% Taking breaks - when to take breaks, etc. 
+% Check that the length of the solution is matches that of the ciphertext if it's a monogram substituiton, and likewise factor in for bigram or trigram or n-grams.
+% be prooud of where you are, etc, don't get discouraged if you feel behidn etc. 
 
 
+\mychapter{9}{A worked example}
+%So it would be really nice to talk through how to solve 10B from 2025 - how to go through the thinking process of things 
 
 \end{document}
