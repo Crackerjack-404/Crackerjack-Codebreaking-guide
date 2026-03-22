@@ -1,11 +1,82 @@
-Chapter 7 — Tools and Resources
-%Why forum is GOATED 
-%There are lots of online tools on solving ciphers.. competition rules forbid using that.. but you can have a look at them to learn??? 
-%In terms of importing your way to victory… 
+%Need to confirm things with GN, esp regarding policy around GenAI + existing resources online. 
+% Talk about forum 
+
+\section{Getting Started}
+
+A common misconception about the CC is that you need to be good at programming to take part. Spoiler: you don't.  
+
+For context, Year 10 was the first time I participated in the challenge, and I only wish I had discovered it sooner. The exhilaration of cracking 10A the night before the final deadline, armed with nothing but a pen, paper, and an Excel spreadsheet, remains one of my most memorable moments. 
+
+For a lot of the challenge, you can get pretty far without much coding at all, it’ll be slow and a bit tedious, but absolutely doable. That said, just because we can solve everything by hand doesn’t mean we should.
+
+My first two of years doing the Cipher Challenge I barely knew how to code, so I relied on very simple tools like:
+\begin{itemize}
+    \item reading from a text file
+    \item finding and replacing characters
+    \item String manipulation
+    \item frequency analysis
+\end{itemize}
+
+You can also use a spreadsheet or any text editor to do this. But the above are just a few lines of Python each, and you can learn them as you go.
+
+When dealing with any programming problem, the hard part is usually knowing what to do rather than how to do it. The `how' comes with time and practice, but once you know what type of cipher/problem you’re dealing with, things become more manageable.
+
+For example, if you’re working with a transposition cipher, you can abstract the problem by thinking of it as just picking a key length, splitting the ciphertext into rows of that length, and ordering the columns and seeing if it looks more or less like English, and making small tweaks in your row/column layout as you go along. You can do all of that using a spreadsheet without writing a single line of code. But once you understand the process of solving that cipher, you can look up how to implement something like a hill-climbing attack to automate the tweaking and speed up the decryption process. 
+
+To be honest, I learned Python during GCSEs, but just the basics to get me a good grade. Having never done any programming before that, most of my coding experience came from writing solutions for the cipher challenge problems, which in turn helped me in A-Level and just improving thinking skills in general. Being at uni now and most of the things I’ve learned is thanks to the experienced gained by taking part in this competition.  
+
+\subsection{Learning with Projects}
+
+I genuinely think that one best way to learn is by just doing projects. Every now and then I start a new Maths/coding project, not necessarily with the intention of always finishing it, but I almost always end up learning a lot in the process. So pick something you enjoy and do it for fun, not just because you think you `should'.
+
+As much as I loved writing code for solving challenges, there were definitely times when it became stressful, and if you find that happening, it’s usually a sign you should switch things up for a bit. Sometimes that means working on a different problem, and sometimes it means doing something completely different\footnote{At one point I picked up crocheting, and I vividly remember crocheting while debugging my A-Level code because I was getting so frustrated with a program that refused to run. Weirdly, that kind of break actually helped more than staring at the screen ever did.}. 
+
+There are plenty of good books and resources that you can find online, but I’ve mostly relied on learning by searching things as I go, because I personally find that big books can be overwhelming when you don’t yet know what’s relevant. 
+
+It makes a massive impact being around people who share a similar goal to you than doing everything by yourself. When I first started programming, I never imagined I’d be able to solve the kinds of problems I can today. It can be really daunting at first, especially when you’re looking at other people’s code and it all feels incomprehensible, but you have to keep things in perspective and trust the learning process, it genuinely does add up over time. 
+
+Also remember, you don’t need to do everything at once. It may feel daunting, but just try and focus on implementing one concept, one solver, or learning one skill at a time. Everyone starts somewhere. 
 
 
-To be honest, I learned Python during GCSEs, but just the basics to get me a good grade. Having never done any programming before that, most of my coding experience came from writing solutions for the cipher challenge problems, which in turn helped me in A-Level and just improving thinking skills in general. Am at uni now and most of the things I’ve learned is thanks to the experienced gained by taking part in this competition.  
+\section{The Official Rules}
 
-I might be biased, but I genuinely think the best way to learn is by just doing projects. Every now and then I start a new maths/coding project, not necessarily with the intention of always finishing it, but I almost always end up learning a lot in the process. So pick something you enjoy and do it for fun, not just because you think you “should”. As much as I loved writing code for solving challenges, there were definitely times when it became stressful, and if you find that happening, it’s usually a sign you should switch things up for a bit. Sometimes that means working on a different problem, and sometimes it means doing something completely different. At one point I picked up crocheting, and I vividly remember crocheting while debugging my A-Level code because I was getting so frustrated with a program that refused to run. Weirdly, that kind of break actually helped more than staring at the screen ever did.
+There are also plenty of online tools that can solve ciphers in one click. The competition rules regarding using resources are as follows: 
 
-There are plenty of good books and resources which the far more experienced here will be happy to recommend, but I’ve mostly relied on learning by searching things as I go, because I personally find that big books can be overwhelming when you don’t yet know what’s relevant. There’s a very high chance that whatever problem you’re stuck on has been hit by someone before (funnily enough this is true in both programming and life…). I’ve also been grateful to have friends and people around me who were there to help, so I’d suggest finding a similar community for yourself. It makes a massive impact being around people who share a similar goal to you than doing everything by yourself. When I first started programming, I never imagined I’d be able to solve the kinds of problems I can today. It can be really daunting at first, especially when you’re looking at other people’s code and it all feels incomprehensible, but you have to keep things in perspective and trust the learning process, it genuinely does add up over time! 
+\begin{quote}
+    \texttt{You may use spreadsheets and text editors to help you tackle the challenges and any software we provide on the Official BOSS \\ Deciphering Tools page. You can also use any software that you write yourself. You should not use deciphering tools you find elsewhere on the web and doing so can result in disqualification.}
+\end{quote}
+
+In short, you're not allowed to import you way to victory, i.e. don’t use existing tools and libraries designed for cipher cracking. But you can write your own programs and use libraries like \texttt{numpy}. If during the competition, you have more questions whether something is within the rules or not, always ask in the \texttt{Forum}. 
+
+\section{The Forum}
+
+The Cipher Challenge Forum has to be one of the most valuable resources in the entire competition. As a reminder, below are the Forum rules reiterated: 
+
+\begin{quote}
+    \texttt{\textbf{Some House Rules for the Forum } \\
+You can post comments and questions about the challenges, and share ideas with others here on the forum. \\
+The Forum is staffed by Harry and Jodie together with members of ELF,  the \textbf{E}lf \textbf{L}eague of \textbf{F}orum moderators. Remember that those you are talking to on the Forum are people too, even the elves. They have feelings, just like you, so keep it friendly and polite.\\
+We want to keep you all safe, so please do not post, or attempt to post anything personal.  Here you can be anyone you want to be as long as you don't tell anyone who you are! \\
+\textbf{Above all, please, please, please don't give hints, tips, or above all solutions to a live challenge without asking us first! This is an important rule and we don't want it compromised.}\\
+If you want to post anything at all about the challenges, post it here, so that we can moderate it and everyone can read it. You might be tempted to use other channels like Discord, but that is a breach of security and not the way we do things here. \\
+\textbf{Remember the three Ws: Be witty, be wise and be warm! Let's make the forum a great place to hang out.} \\Harry}
+\end{quote}
+
+I have loved posting and contributing to the forum both as a competitor and in the past year as an alumnus. Some of my favourite moments now come from posting on it and seeing someone else discover the joy of problem solving. Sometimes it’s just a small hint, or someone asking a question that nudges another person in the right direction, other times it’s reading about someone finally crack a cipher they’ve been stuck on for days.
+
+Learning is much easier when you're not doing it alone. There’s a very high chance that whatever problem you’re stuck on has been hit by someone before\footnote{funnily enough this is true in both programming and life…} and you get have this space where you can not only communicate with like-minded people, but be part of this shared experience. And if you're lucky, you might even get a reply for \texttt{Harry} himself. 
+
+
+\section{Use of Generative AI}
+% ASK GN about this? 
+
+\subsection{What AI can't replace}
+At the 2025 Prizegiving at Bletchley, guest speaker Rob Eastaway gave a brilliant talk about (counter-)intuition and how often our instincts can lead us down the incorrect solution. But one moment that stuck with me was when he mentioned how AI almost never responds with `I don’t know'. Try it yourself, ask your favourite LLM, ``Why don’t you ever say `I don’t know'?" and see what happens.
+
+We hear a lot about AI at the moment, and how `intelligent' it’s becoming, but there are still things that it can’t replace. In many ways, I believe that problem solving begins with the willingness to admit you don’t yet know the answer, and the curiosity to keep exploring until you do.
+
+AI can certainly generate answers, but it can’t replace the experience of solving something meaningful together with other people. It can’t replace the moment when someone on the forum posts a small hint that suddenly unlocks a problem you’ve been stuck on for hours. It can’t replace the pride you feel when another student finally cracks a cipher they have been wrestling with for days, and it definitely can’t replace the friendships and collaborations that form along the way.
+
+No conversation with an AI can replace the feeling of another human choosing to spend their time helping you through something difficult. And equally, no algorithm can replace the sheer joy of finally cracking a ciphertext after hours of effort.
+
+What I’ve realised over the years is something quite simple: one of the things humans can do that AI cannot is share in the joy of someone else finally solving something difficult. And looking back, the Cipher Challenge is one of the places where I’ve seen that most clearly. 
