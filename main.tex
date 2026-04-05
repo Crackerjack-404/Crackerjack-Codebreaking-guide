@@ -8,6 +8,7 @@
 \usepackage{float}
 \usepackage{wrapfig}
 \usepackage{hyperref,cleveref,comment}
+\hypersetup{colorlinks=true,urlcolor=blue}
 \usepackage{mathtools}
 \usepackage{titlesec}
 \usepackage{verbatim}
@@ -21,6 +22,10 @@
 \usepackage{fancyvrb}
 \usepackage{lastpage, cancel}
 \usepackage{derivative}
+
+\usepackage{epigraph}
+\setlength{\epigraphwidth}{.5\textwidth}
+
 %\usepackage{libertinus}
 %\usepackage{inconsolata} % for ciphertext / code
 %\usepackage{microtype}
@@ -52,7 +57,7 @@
 
 \begin{abstract}
 
-\textit{The Hitchhiker's Guide to the Galaxy} is a book that is designed help its reader in a universe that is, by most reasonable standards, confusing and occasionally hostile. This guide has far more modest ambitions, namely attempting to help you stay calm in front of a block of ciphertext. If there is anything worth keeping in mind throughout the rest of this guide, it is the same one printed in large, friendly letters on the cover of the Hitchhiker's Guide: \textbf{Don't Panic}.
+\textit{The Hitchhiker’s Guide to the Galaxy} is, among other things, a book designed to help its reader navigate a universe that is confusing, chaotic, and occasionally hostile. This guide has far more modest ambitions: to help you remain at least somewhat functional while staring at a block of ciphertext that appears to have been designed specifically to ruin your evening. If there is one thing worth remembering throughout the rest of this guide, it is the same advice printed in large, friendly letters on the cover of the \textit{Hitchhiker’s Guide}: \href{https://en.wikipedia.org/wiki/Phrases_from_The_Hitchhiker%27s_Guide_to_the_Galaxy#Don't_Panic}{\textbf{DON’T PANIC}}.
 
 \end{abstract}
 
@@ -60,15 +65,15 @@
 \chapter*{What this guide is (and isn't)}
 
 
-This is not a guide on how to break ciphers. 
+This is not a guide on how to break codes. 
 
-There are plenty of places one can go to learn the mechanics of codebreaking like how to run frequency analysis, or a hill-climb attack, or which button to press next in Python. If that's what you're looking for, this document will feel frustratingly indirect. 
+There are plenty of places you can go if what you want is the mechanics: how to run frequency analysis, how to implement a hill-climb attack, or which button to press next in Python. If that's what you're looking for, this guide will probably feel a bit frustrating. 
 
-This is a guide on how to be a codebreaker. 
+This is a guide on how to be a codebreaker. Or at least, a guide I wish I had when I first started. 
 
-It's about what to do before you know what cipher you're looking at, on how to think when nothing makes sense yet, about recognising process when there is no readable plaintext in sight, and staying functional and sane when you're stuck, because you will be. 
+It's about what to do before you know what cipher you're even looking at. On how to think when nothing makes sense yet, how to about recognising process when there is no readable plaintext in sight, and staying functional and vaguely sane when you're stuck, because at some point, you absolutely will be. 
 
-Codebreaking, especially with something like the National Cipher Challenge, is rarely a neat sequence of steps. More often than not, it's long periods of uncertainty sprinkled with small insights that only feel obvious in hindsight. This guide focuses on the process, the reasoning, the framing, and the decision making that happens when you don't yet have all the answers. 
+Codebreaking, especially with something like the National Cipher Challenge, is very rarely a neat sequence of steps. More often than not, it's long periods of uncertainty sprinkled with small insights that only feel obvious in hindsight.
 
 Most of the difficulty in codebreaking comes from uncertainty like not knowing where to start, or whether you're making progress, and not knowing whether the idea you're attached to is actually helping. 
 

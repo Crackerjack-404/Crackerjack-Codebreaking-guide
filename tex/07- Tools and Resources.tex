@@ -1,3 +1,7 @@
+\epigraph{A fool with a tool is still a fool}
+{\textit{Grady Booch}}
+
+
 %Need to confirm things with GN, esp regarding policy around GenAI + existing resources online. 
 % Talk about forum 
 
@@ -23,15 +27,24 @@ When dealing with any programming problem, the hard part is usually knowing what
 
 For example, if you’re working with a transposition cipher, you can abstract the problem by thinking of it as just picking a key length, splitting the ciphertext into rows of that length, and ordering the columns and seeing if it looks more or less like English, and making small tweaks in your row/column layout as you go along. You can do all of that using a spreadsheet without writing a single line of code. But once you understand the process of solving that cipher, you can look up how to implement something like a hill-climbing attack to automate the tweaking and speed up the decryption process. 
 
-I learned Python during GCSEs, but just the basics to get me a good grade. Having never done any programming before that, most of my coding experience came from writing solutions for the cipher challenge problems, which in turn helped me in A-Level and just improving thinking skills in general. While studying Mathematics at university now, I realised that most of the things I’ve learned is thanks to the experienced gained by taking part in this competition.  
+I learned Python during GCSEs, but just the basics to get me a good grade. Having never done any programming before that, most of my coding experience came from writing solutions for the cipher challenge problems, which in turn helped me in A-Level and just improving thinking skills in general. There is a difference between learning programming in a classroom and learning because you have a genuinely annoying ciphertext in front of you and would quite like it to stop being annoying. While studying Mathematics at university now, I realised that most of the things I’ve learned is thanks to the experienced gained by taking part in this competition.  
+
+\subsection{Past Challenges}
+% link to madness' github archive of challenge?
+
+One of the most useful things to do is to go back and look at past challenges. Conveniently for the competitors, there exists the \textbf{\href{https://github.com/themaddoctor/BritishNationalCipherChallenge}{unofficial archive of National Cipher Challenge}} which has problems dating back all the way to 2002. 
+
+Past challenges are helpful for two reasons. Firstly, they give you practice. Which is obvious, but important. Secondly, they help you build pattern recognition. You start to notice the kinds of ciphers that appear more often in later rounds, the kinds of twists the setters seem to enjoy introducing when they are feeling particularly mischievous.
+
+When it came to tackling \texttt{10B}, our team ended up going back through previous later round challenges and making a list of the kinds of ciphers that had appeared before. From there, we started writing helper scripts for the ones that came up more often, just so we could automate the more repetitive parts and spend more time actually thinking.
 
 \subsection{Learning with Projects}
 
-I genuinely think that one best way to learn is by just doing projects. Every now and then I start a new Maths/coding project, not necessarily with the intention of always finishing it, but I almost always end up learning a lot in the process. So pick something you enjoy and do it for fun, not just because you think you `should'.
+I genuinely think one of the best ways to learn anything is to build things that interest you. Every now and then I start some new maths or coding project, often with absolutely no guarantee that I will finish it, but I almost always end up learning a lot in the process. So pick something you enjoy and do it for fun, not just because you think you `should'.
 
-As much as I loved writing code for solving challenges, there were definitely times when it became stressful, and if you find that happening, it’s usually a sign you should switch things up for a bit. Sometimes that means working on a different problem, and sometimes it means doing something completely different\footnote{At one point I picked up crocheting, and I vividly remember crocheting while debugging my A-Level code because I was getting so frustrated with a program that refused to run. Weirdly, that kind of break actually helped more than staring at the screen ever did.}. 
+As much as I loved writing code for solving challenges, there were definitely times when it became stressful, and if you find that happening, it’s usually a sign you should switch things up for a bit. Sometimes that means working on a different problem, and sometimes it means doing something completely different\footnote{At one point I picked up crocheting, and I vividly remember crocheting while debugging my A-Level code because I was getting so frustrated with a program that refused to run. Weirdly, that kind of break actually helped more than staring at the screen ever did. This sounds ridiculous, but then again, so does a lot of programming.}. 
 
-There are plenty of good books and resources that you can find online, but I’ve mostly relied on learning by searching things as I go. I personally find that big books can be overwhelming when you don’t yet know what’s relevant. 
+There are lots of excellent books and resources out there, and people much more experienced than me will happily recommend them if you post in the \texttt{Forum}. But personally, I have mostly learned by searching things as I needed them. I often find big books overwhelming when I do not yet know what is relevant. It is much easier to care about a concept once you have already encountered the problem that makes it useful.
 
 It makes a massive impact being around people who share a similar goal to you than doing everything by yourself. When I first started programming, I never imagined I’d be able to solve the kinds of problems I can today. It can be really daunting at first, especially when you’re looking at other people’s code and it all feels incomprehensible, but you have to keep things in perspective and trust the learning process, it genuinely does add up over time. 
 
@@ -46,7 +59,11 @@ There are also plenty of online tools that can solve ciphers in one click. The c
     \texttt{You may use spreadsheets and text editors to help you tackle the challenges and any software we provide on the Official BOSS \\ Deciphering Tools page. You can also use any software that you write yourself. You should not use deciphering tools you find elsewhere on the web and doing so can result in disqualification.}
 \end{quote}
 
-In short, you're not allowed to import you way to victory, i.e. don’t use existing tools and libraries designed for cipher cracking. But you can write your own programs and use libraries like \texttt{numpy}. If during the competition, you have more questions whether something is within the rules or not, always ask in the \texttt{Forum}. 
+In short, you're not allowed to import you way to victory, i.e. don’t use existing tools and libraries designed for cipher cracking. But you can write your own programs and use libraries like \texttt{numpy}. 
+
+The challenge site also has many good resources under the \texttt{\href{https://www.cipherchallenge.org/resources-media/}{BOSS Training Division}} to help you get started with codebreaking and programming. 
+
+If during the competition, you have more questions whether something is within the rules or not, always ask in the \texttt{Forum}.
 
 \section{The Forum}
 
@@ -71,15 +88,14 @@ Learning is much easier when you're not doing it alone. There’s a very high ch
 % ASK GN about this? 
 
 \subsection{What AI can't replace}
+
 At the 2025 Prizegiving at Bletchley, guest speaker Rob Eastaway gave a brilliant talk about (counter-)intuition and how often our instincts can lead us down the incorrect solution. But one moment that stuck with me was when he mentioned how AI almost never responds with `I don’t know'. Try it yourself, ask your favourite LLM, ``Why don’t you ever say `I don’t know'?" and see what happens.
 
 We hear a lot about AI at the moment, and how `intelligent' it’s becoming, but there are still things that it can’t replace. In many ways, I believe that problem solving begins with the willingness to admit you don’t yet know the answer, and the curiosity to keep exploring until you do.
 
-AI can certainly generate answers, but it can’t replace the experience of solving something meaningful together with other people. It can’t replace the moment when someone on the forum posts a small hint that suddenly unlocks a problem you’ve been stuck on for hours. It can’t replace the pride you feel when another student finally cracks a cipher they have been wrestling with for days, and it definitely can’t replace the friendships and collaborations that form along the way.
+AI can certainly generate answers, but it can’t replace the experience of solving something meaningful together with other people. It can’t replace the moment when someone on the forum posts a small hint that suddenly unlocks a problem you’ve been stuck on for hours. It can’t replace the pride you feel when another student finally cracks a cipher they have been wrestling with for days, and it definitely can’t replace the strange, lovely experience of building friendships around shared confusion and a mutual desire to bully ciphertext into becoming plaintext.
 
-No conversation with an AI can replace the feeling of another human choosing to spend their time helping you through something difficult. And equally, no algorithm can replace the sheer joy of finally cracking a ciphertext after hours of effort.
+No conversation with an AI can replace the feeling of another human choosing to spend their time helping you through something difficult. And equally, no algorithm can replace the sheer joy of finally cracking a ciphertext after hours of effort. And no matter how sophisticated the tool becomes, that part can’t be automated.
 
-What I’ve realised over the years is something simple: one of the things humans can do that AI cannot is share in the joy of someone else finally solving something difficult. And looking back, the Cipher Challenge is one of the places where I’ve seen that most clearly. 
+What I’ve realised over the years is something simple: one of the things humans can do that AI cannot is share in the joy of someone else finally solving something difficult. Looking back, the Cipher Challenge is one of the places where I’ve seen that most clearly.
 
-
-% Resources - past challenges can be found at madness GitHub archive 
