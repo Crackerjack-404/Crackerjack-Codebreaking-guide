@@ -22,14 +22,14 @@ book:
 
   chapters:
     - index.qmd
-    - chapters/01-Being Stuck.qmd
-    - chapters/02-Redefining Progress.qmd
-    - chapters/03-The Starting Line.qmd
-    - chapters/04-Abandoning Ideas.qmd
-    - chapters/05-Using Context.qmd
-    - chapters/06-Teamwork.qmd
-    - chapters/07-Tools and Resources.qmd
-    - chapters/08-The Ling Game
+    - chapters/01- Being Stuck.qmd
+    - chapters/02- Redefining Progress.qmd
+    - chapters/03- The Starting Line.qmd
+    - chapters/04- Abandoning Ideas.qmd
+    - chapters/05- Using Context.qmd
+    - chapters/06- Teamwork.qmd
+    - chapters/07- Tools and Resources.qmd
+    - chapters/08- The Long Game.qmd
 
 format:
   html:
