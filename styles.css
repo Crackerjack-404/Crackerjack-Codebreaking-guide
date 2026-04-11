@@ -33,6 +33,17 @@
   padding-left: 1rem;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+body {
+  font-family: 'Share Tech Mono', monospace;
+}
+
+h1, h2, h3 {
+  font-family: 'Special Elite', cursive;
+  letter-spacing: 0.05em;
+}
+
 img {
   max-width: 100%;
   height: auto;
