@@ -54,3 +54,297 @@ body::before {
   width: calc(100% * var(--scroll) );
 }
 
+
+/* ============================================================
+   INTELLIGENCE — Quarto Theme
+   Sleek, modern, classified-document aesthetic
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&display=swap');
+
+/* ── CSS Variables ────────────────────────────────────────── */
+:root {
+  --ink:        #0a0c10;
+  --paper:      #f4f1eb;
+  --off-white:  #e8e4dc;
+  --accent:     #c8102e;       /* classified red */
+  --accent-dim: rgba(200, 16, 46, 0.12);
+  --steel:      #4a5568;
+  --muted:      #7a8494;
+  --rule:       rgba(10, 12, 16, 0.12);
+  --mono:       'DM Mono', monospace;
+  --sans:       'Syne', sans-serif;
+  --stamp-font: 'Syne', sans-serif;
+}
+
+/* ── Base ─────────────────────────────────────────────────── */
+body {
+  font-family: var(--mono);
+  font-weight: 300;
+  font-size: 0.97rem;
+  line-height: 1.85;
+  color: var(--ink);
+  background-color: var(--paper);
+  background-image:
+    /* subtle grain texture */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Headings ─────────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--sans);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  border-bottom: 3px solid var(--ink);
+  padding-bottom: 0.4rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  border-left: 3px solid var(--accent);
+  padding-left: 0.75rem;
+  margin-left: -0.78rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+/* ── Links ────────────────────────────────────────────────── */
+a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 3px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
+/* ── Horizontal Rules ─────────────────────────────────────── */
+hr {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 2.5rem 0;
+}
+
+/* ── Code ─────────────────────────────────────────────────── */
+code, kbd, samp, tt {
+  font-family: var(--mono);
+  font-size: 0.88em;
+  background: var(--off-white);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  padding: 0.1em 0.35em;
+  color: var(--accent);
+}
+
+pre {
+  background: var(--ink) !important;
+  border: none;
+  border-radius: 0;
+  border-left: 3px solid var(--accent);
+  padding: 1.4rem 1.6rem;
+  overflow-x: auto;
+  position: relative;
+}
+
+pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: #e2ddd5;
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+/* ── Blockquotes — "Classified Excerpt" style ─────────────── */
+blockquote {
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--accent);
+  background: var(--accent-dim);
+  margin: 2rem 0;
+  padding: 1.2rem 1.5rem;
+  font-style: italic;
+  color: var(--steel);
+  position: relative;
+}
+
+blockquote::before {
+  content: "// EXCERPT";
+  font-family: var(--mono);
+  font-style: normal;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+}
+
+/* ── Tables ───────────────────────────────────────────────── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--mono);
+  font-size: 0.88rem;
+  margin: 1.5rem 0;
+}
+
+thead tr {
+  border-bottom: 2px solid var(--ink);
+  background: var(--off-white);
+}
+
+thead th {
+  font-family: var(--sans);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  padding: 0.6rem 0.9rem;
+  text-align: left;
+}
+
+tbody td {
+  padding: 0.55rem 0.9rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ── Callout / Alert boxes ────────────────────────────────── */
+.callout {
+  border-radius: 0;
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--accent);
+}
+
+/* ── Navigation sidebar ───────────────────────────────────── */
+#quarto-sidebar {
+  background: var(--off-white);
+  border-right: 1px solid var(--rule);
+}
+
+.sidebar-title {
+  font-family: var(--sans) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+}
+
+.sidebar-item a {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: var(--steel);
+  letter-spacing: 0.02em;
+}
+
+.sidebar-item a:hover {
+  color: var(--accent);
+}
+
+.sidebar-item.active > a {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+/* ── Table of Contents (right panel) ─────────────────────── */
+#TOC {
+  border-left: 1px solid var(--rule);
+  padding-left: 1.2rem;
+  font-size: 0.82rem;
+}
+
+#TOC a {
+  text-decoration: none;
+  color: var(--muted);
+  display: block;
+  padding: 0.15rem 0;
+  transition: color 0.15s;
+}
+
+#TOC a:hover,
+#TOC a.active {
+  color: var(--accent);
+}
+
+/* ── Footer ───────────────────────────────────────────────── */
+.nav-footer {
+  border-top: 1px solid var(--rule);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+/* ── "CLASSIFIED" stamp utility class ────────────────────── */
+/* Add class="classified" to any div in your .qmd             */
+.classified {
+  display: inline-block;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  font-family: var(--stamp-font);
+  font-weight: 800;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.6rem;
+  opacity: 0.85;
+  transform: rotate(-1.5deg);
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+/* ── Redaction utility ────────────────────────────────────── */
+/* Wrap text in <span class="redacted"> in your .qmd          */
+.redacted {
+  background: var(--ink);
+  color: var(--ink);
+  cursor: default;
+  user-select: none;
+  padding: 0 0.25em;
+  border-radius: 1px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.redacted:hover {
+  background: var(--accent-dim);
+  color: var(--steel);
+}
+
+/* ── Scrollbar (Webkit) ───────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--off-white); }
+::-webkit-scrollbar-thumb { background: var(--steel); border-radius: 0; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+/* ── Selection ────────────────────────────────────────────── */
+::selection {
+  background: var(--accent);
+  color: var(--paper);
+}
