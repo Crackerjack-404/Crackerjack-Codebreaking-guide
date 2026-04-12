@@ -33,7 +33,8 @@ book:
 
 format:
   html:
-    theme: none
+    theme: 
+      light: cosmo 
     css: styles.css
     include-in-header:
       - text: |
