@@ -16,11 +16,11 @@ There are plenty of places you can go if what you want is the mechanics: how to 
 
 This is a guide on how to be a codebreaker. Or at least, a guide I wish I had when I first started. 
 
-It's about what to do before you know what cipher you're even looking at. On how to think when nothing makes sense yet, how to about recognising process when there is no readable plaintext in sight, and staying functional and vaguely sane when you're stuck, because at some point, you absolutely will be. 
+It’s about what to do before you know what cipher you’re even looking at. How to think when nothing makes sense yet, how to recognise progress when there is no readable plaintext in sight, and how to stay functional and vaguely sane when you’re stuck, because at some point, you absolutely will be.
 
 Codebreaking, especially with something like the National Cipher Challenge, is very rarely a neat sequence of steps. More often than not, it's long periods of uncertainty sprinkled with small insights that only feel obvious in hindsight.
 
-Most of the difficulty in codebreaking comes from uncertainty like not knowing where to start, or whether you're making progress, and not knowing whether the idea you're attached to is actually helping. 
+Most of the difficulty in codebreaking comes from uncertainty like not knowing where to start, or whether you're making progress, and not knowing whether the idea you're attached to is actually helping.
 
 In short, if you've ever stared at a block of ciphertext and thought to yourself, *I have no idea what I'm doing*, then you're in the right place. 
 
