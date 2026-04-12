@@ -1,14 +1,12 @@
 /* ============================================================
    INTELLIGENCE — Quarto Theme
    Sleek, modern, classified-document aesthetic
-   Light + Dark mode via [data-bs-theme]
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&display=swap');
 
-/* ── CSS Variables — Light (default) ─────────────────────── */
-:root,
-[data-bs-theme="light"] {
+/* ── CSS Variables ────────────────────────────────────────── */
+:root {
   --ink:          #0a0c10;
   --paper:        #f4f1eb;
   --off-white:    #e8e4dc;
@@ -23,22 +21,6 @@
   --epigraph-src: #777;
   --mono:         'DM Mono', monospace;
   --sans:         'Syne', sans-serif;
-}
-
-/* ── CSS Variables — Dark ─────────────────────────────────── */
-[data-bs-theme="dark"] {
-  --ink:          #eae6de;
-  --paper:        #0f1117;
-  --off-white:    #181c24;
-  --accent:       #e8294a;
-  --accent-dim:   rgba(232, 41, 74, 0.12);
-  --steel:        #8896aa;
-  --muted:        #5c6878;
-  --rule:         rgba(234, 230, 222, 0.10);
-  --code-bg:      #080a0e;
-  --code-fg:      #c9c4bb;
-  --epigraph-fg:  #b0b0b0;
-  --epigraph-src: #9a9a9a;
 }
 
 /* ── Reading progress bar ─────────────────────────────────── */
@@ -65,7 +47,6 @@ body {
   background-image:
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
   -webkit-font-smoothing: antialiased;
-  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 /* ── Images ───────────────────────────────────────────────── */
@@ -87,12 +68,11 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--ink);
   margin-top: 2.5rem;
   margin-bottom: 0.75rem;
-  transition: color 0.25s ease;
 }
 
 h1 {
-  font-size: 2.0rem;
-  letter-spacing: -0.04em;
+  font-size: 2rem;
+  letter-spacing: -0.03em;
   border-bottom: 3px solid var(--ink);
   padding-bottom: 0.4rem;
 }
@@ -144,7 +124,6 @@ code, kbd, samp, tt {
   border-radius: 2px;
   padding: 0.1em 0.35em;
   color: var(--accent);
-  transition: background 0.25s ease;
 }
 
 /* ── Code — block ─────────────────────────────────────────── */
@@ -156,7 +135,6 @@ pre {
   padding: 1.4rem 1.6rem;
   overflow-x: auto;
   position: relative;
-  transition: background 0.25s ease;
 }
 
 pre code {
@@ -168,30 +146,13 @@ pre code {
   line-height: 1.7;
 }
 
-/* ── Blockquotes — "Classified Excerpt" ──────────────────── */
+/* ── Blockquotes ──────────────────────────────────────────── */
 blockquote {
-  border: 1px solid var(--rule);
-  border-left: 4px solid var(--accent);
-  background: var(--accent-dim);
+  border-left: 3px solid var(--accent);
   margin: 2rem 0;
-  padding: 1.2rem 1.5rem;
+  padding: 0.5rem 0 0.5rem 1.5rem;
   font-style: italic;
   color: var(--steel);
-  position: relative;
-  transition: background 0.25s ease, color 0.25s ease;
-}
-
-blockquote::before {
-  content: "// EXCERPT";
-  font-family: var(--mono);
-  font-style: normal;
-  font-size: 0.65rem;
-  font-weight: 500;
-  letter-spacing: 0.15em;
-  color: var(--accent);
-  display: block;
-  margin-bottom: 0.5rem;
-  opacity: 0.8;
 }
 
 /* ── Epigraph ─────────────────────────────────────────────── */
@@ -214,10 +175,9 @@ blockquote::before {
   position: relative;
   border: none;
   background: transparent;
-  transition: color 0.25s ease;
 }
 
-/* Fine double-rule left border: thin neutral + accent */
+/* Fine double-rule left border */
 .epigraph::before {
   content: "";
   position: absolute;
@@ -227,7 +187,6 @@ blockquote::before {
   width: 1px;
   background: var(--ink);
   opacity: 0.2;
-  transition: background 0.25s ease;
 }
 
 .epigraph::after {
@@ -242,6 +201,10 @@ blockquote::before {
 }
 
 /* Ghost quotation mark */
+.epigraph > p:first-child {
+  position: relative;
+}
+
 .epigraph > p:first-child::before {
   content: "\201C";
   font-family: var(--sans);
@@ -252,8 +215,8 @@ blockquote::before {
   opacity: 0.12;
   line-height: 0;
   position: absolute;
-  top: 2.2rem;
-  left: -0.3rem;
+  top: 2rem;
+  left: -0.4rem;
   pointer-events: none;
 }
 
@@ -266,10 +229,8 @@ blockquote::before {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--epigraph-src);
-  transition: color 0.25s ease;
 }
 
-/* Dash before attribution */
 .epigraph footer::before {
   content: "— ";
   color: var(--accent);
@@ -288,7 +249,6 @@ table {
 thead tr {
   border-bottom: 2px solid var(--ink);
   background: var(--off-white);
-  transition: background 0.25s ease;
 }
 
 thead th {
@@ -321,7 +281,6 @@ tbody tr:last-child td {
 #quarto-sidebar {
   background: var(--off-white);
   border-right: 1px solid var(--rule);
-  transition: background 0.25s ease;
 }
 
 .sidebar-title {
