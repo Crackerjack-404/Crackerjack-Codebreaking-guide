@@ -1,91 +1,83 @@
 \documentclass[12pt]{report}
-\usepackage[a4paper, total={6in, 8in}]{geometry}
-\usepackage{amsmath, amsfonts, amsthm, amssymb, fontspec}
-\usepackage{graphicx} % Required for inserting images
-\usepackage{tabularx}
-\usepackage{xcolor} 
-\usepackage{anyfontsize}
+\usepackage{crackerjack}
+
+% Additional packages not handled by crackerjack.sty
+\usepackage{amsmath, amsfonts, amsthm, amssymb}
 \usepackage{float}
 \usepackage{wrapfig}
-\usepackage{hyperref,cleveref,comment}
-\hypersetup{colorlinks=true,urlcolor=blue}
+\usepackage{cleveref}
 \usepackage{mathtools}
-\usepackage{titlesec}
 \usepackage{verbatim}
 \usepackage{appendix}
-\usepackage{parskip}
-\usepackage[none]{hyphenat}
-\usepackage{enumitem}
-\usepackage{contour}
-\usepackage{ulem}
-\usepackage[most]{tcolorbox}
-\usepackage{fancyvrb}
-\usepackage{lastpage, cancel}
+\usepackage{cancel}
 \usepackage{derivative}
-\usepackage{lmodern}
 
-\usepackage{epigraph}
-\setlength{\epigraphwidth}{.5\textwidth}
-
-%\usepackage{libertinus}
-%\usepackage{inconsolata} % for ciphertext / code
-%\usepackage{microtype}
-
-
-%\usepackage{newpxtext,newpxmath}
-\usepackage{tgschola}
-\usepackage[T1]{fontenc}
-
-\usepackage[Conny]{fncychap}
-%Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
-\pagenumbering{arabic}
-\hypersetup{pdfborder=0 0 0}
-
-\newcommand{\mychapter}[2]{
-    \setcounter{chapter}{#1}
-    \setcounter{section}{0}
-    \chapter*{#2}
-    \addcontentsline{toc}{chapter}{#2}
+% ── Custom chapter command ────────────────────────────────────
+\newcommand{\mychapter}[2]{%
+    \setcounter{chapter}{#1}%
+    \setcounter{section}{0}%
+    \chapter*{#2}%
+    \addcontentsline{toc}{chapter}{#2}%
 }
 
 \begin{document}
 
-
-\title{Don’t Panic: A Codebreaker's Guide to Getting Unstuck}
-\author{
-  Crackerjack \\
-}
-\date{\today}
-
+% ── 1. Title page ─────────────────────────────────────────────
 \maketitle
 
+% ── 2. Abstract — own page, vertically centred ───────────────
 \begin{abstract}
-
-\textit{The Hitchhiker’s Guide to the Galaxy} is, among other things, a book designed to help its reader navigate a universe that is confusing, chaotic, and occasionally hostile. This guide has far more modest ambitions: to help you remain at least somewhat functional while staring at a block of ciphertext that appears to have been designed specifically to ruin your evening. If there is one thing worth remembering throughout the rest of this guide, it is the same advice printed in large, friendly letters on the cover of the \textit{Hitchhiker’s Guide}: \href{https://en.wikipedia.org/wiki/Phrases_from_The_Hitchhiker%27s_Guide_to_the_Galaxy#Don't_Panic}{\textbf{DON’T PANIC}}.
-
+\textit{The Hitchhiker's Guide to the Galaxy} is, among other things,
+a book designed to help its reader navigate a universe that is
+confusing, chaotic, and occasionally hostile. This guide has far more
+modest ambitions: to help you remain at least somewhat functional while
+staring at a block of ciphertext that appears to have been designed
+specifically to ruin your evening. If there is one thing worth
+remembering throughout the rest of this guide, it is the same advice
+printed in large, friendly letters on the cover of the
+\textit{Hitchhiker's Guide}:
+\href{https://en.wikipedia.org/wiki/Phrases_from_The_Hitchhiker%27s_Guide_to_the_Galaxy#Don't_Panic}{\textbf{DON'T PANIC}}.
 \end{abstract}
 
-
+% ── 3. Preface (not in TOC, no header) ───────────────────────
 \chapter*{What this guide is (and isn't)}
+\thispagestyle{plain}
 
+This is not a guide on how to break codes.
 
-This is not a guide on how to break codes. 
+There are plenty of places you can go if what you want is the
+mechanics: how to run frequency analysis, how to implement a
+hill-climb attack, or which button to press next in Python. If
+that's what you're looking for, this guide will probably feel a bit
+frustrating.
 
-There are plenty of places you can go if what you want is the mechanics: how to run frequency analysis, how to implement a hill-climb attack, or which button to press next in Python. If that's what you're looking for, this guide will probably feel a bit frustrating. 
+This is a guide on how to be a codebreaker. Or at least, a guide I
+wish I had when I first started.
 
-This is a guide on how to be a codebreaker. Or at least, a guide I 
-wish I had when I first started. 
+It's about what to do before you know what cipher you're even looking
+at. How to think when nothing makes sense yet, how to recognise
+progress when there is no readable plaintext in sight, and how to stay
+functional and vaguely sane when you're stuck, because at some point,
+you absolutely will be.
 
-It’s about what to do before you know what cipher you’re even looking at. How to think when nothing makes sense yet, how to recognise progress when there is no readable plaintext in sight, and how to stay functional and vaguely sane when you’re stuck, because at some point, you absolutely will be.
+Codebreaking, especially with something like the National Cipher
+Challenge, is very rarely a neat sequence of steps. More often than
+not, it's long periods of uncertainty sprinkled with small insights
+that only feel obvious in hindsight.
 
-Codebreaking, especially with something like the National Cipher Challenge, is very rarely a neat sequence of steps. More often than not, it's long periods of uncertainty sprinkled with small insights that only feel obvious in hindsight.
+Most of the difficulty in codebreaking comes from uncertainty like not
+knowing where to start, or whether you're making progress, and not
+knowing whether the idea you're attached to is actually helping.
 
-Most of the difficulty in codebreaking comes from uncertainty like not knowing where to start, or whether you're making progress, and not knowing whether the idea you're attached to is actually helping. 
+In short, if you've ever stared at a block of ciphertext and thought
+to yourself, \textit{`I have no idea what I'm doing'}, then you're in
+the right place.
 
-In short, if you've ever stared at a block of ciphertext and thought to yourself, \textit{`I have no idea what I'm doing'}, then you're in the right place. 
+% ── 4. Table of contents ─────────────────────────────────────
+\tableofcontents
+\thispagestyle{plain}
 
-\tableofcontents 
-
+% ── 5. Chapters ──────────────────────────────────────────────
 
 \mychapter{1}{Being Stuck}
 \input{tex/01- Being Stuck}
@@ -94,30 +86,21 @@ In short, if you've ever stared at a block of ciphertext and thought to yourself
 \input{tex/02- Redefining Progress}
 
 \mychapter{3}{The Starting Line}
-\input{tex/03- The Starting Line} 
+\input{tex/03- The Starting Line}
 
 \mychapter{4}{Abandoning Ideas}
 \input{tex/04- Abandoning Ideas}
-% when to know that an idea isn't working, or isn't helpful.. 
-% ruling things out 
 
 \mychapter{5}{Using Context}
 \input{tex/05- Using Context}
-% how to use competition context 
-% value of the story 
 
 \mychapter{6}{Teamwork}
 \input{tex/06- Teamwork}
-% how to work well in a team? Identity strengths and divide work 
-% look after one another 
 
 \mychapter{7}{Tools and Resources}
 \input{tex/07- Tools and Resources}
-% Section on AI - link to competition AI policy? 
-% Posting on forum and related things 
 
 \mychapter{8}{The Long Game}
 \input{tex/08- The Long Game}
-
 
 \end{document}
