@@ -1,5 +1,5 @@
 ---
-title: "Don't Panic: A Codebreaker's Guide to Getting Unstuck"
+title: "What This Guide Is (And Isn't)"
 author: "Crackerjack" 
 date: last-modified
 date-format: "DD MM YYYY"
