@@ -4,18 +4,22 @@ project:
   resources:
     - pdf
     - xkcd
+
 book:
-  title: "Don't Panic: A Codebreaker's Guide to Getting Unstuck"
+  title: "Don’t Panic: A Codebreaker's Guide to Getting Unstuck"
   author: "Crackerjack"
+
   sidebar:
     search: true
     tools:
       - icon: download
         href: guide.pdf
         text: Download PDF
-      - icon: link
+
+      - icon: link 
         href: https://www.cipherchallenge.org
         text: National Cipher Challenge
+
   chapters:
     - index.qmd
     - chapters/01- Being Stuck.qmd
@@ -26,6 +30,7 @@ book:
     - chapters/06- Teamwork.qmd
     - chapters/07- Tools and Resources.qmd
     - chapters/08- The Long Game.qmd
+
 format:
   html:
     theme: none
