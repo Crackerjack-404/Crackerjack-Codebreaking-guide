@@ -1,9 +1,10 @@
 /* ============================================================
    INTELLIGENCE — Quarto Theme
+   Space Grotesk + IBM Plex Mono
    Sleek, modern, classified-document aesthetic
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700;800&family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,400&display=swap');
 
 /* ── CSS Variables ────────────────────────────────────────── */
 :root {
@@ -19,8 +20,8 @@
   --code-fg:      #e2ddd5;
   --epigraph-fg:  #555;
   --epigraph-src: #777;
-  --mono:         'DM Mono', monospace;
-  --sans:         'Syne', sans-serif;
+  --mono:         'IBM Plex Mono', monospace;
+  --sans:         'Space Grotesk', sans-serif;
 }
 
 /* ── Reading progress bar ─────────────────────────────────── */
@@ -72,15 +73,15 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2rem;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
   border-bottom: 3px solid var(--ink);
   padding-bottom: 0.4rem;
 }
 
 h2 {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   font-weight: 700;
   border-left: 3px solid var(--accent);
   padding-left: 0.75rem;
@@ -88,11 +89,11 @@ h2 {
 }
 
 h3 {
-  font-size: 1.1rem;
-  letter-spacing: 0.1em;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--muted);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 /* ── Links ────────────────────────────────────────────────── */
