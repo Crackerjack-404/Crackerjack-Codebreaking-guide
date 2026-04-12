@@ -1,10 +1,10 @@
 /* ============================================================
    INTELLIGENCE — Quarto Theme
-   Space Grotesk + IBM Plex Mono
+   Space Grotesk + DM Mono
    Sleek, modern, classified-document aesthetic
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700;800&family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&display=swap');
 
 /* ── CSS Variables ────────────────────────────────────────── */
 :root {
@@ -20,7 +20,7 @@
   --code-fg:      #e2ddd5;
   --epigraph-fg:  #555;
   --epigraph-src: #777;
-  --mono:         'IBM Plex Mono', monospace;
+  --mono:         'DM Mono', monospace;
   --sans:         'Space Grotesk', sans-serif;
 }
 
