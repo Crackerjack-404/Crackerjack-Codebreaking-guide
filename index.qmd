@@ -1,8 +1,27 @@
 ---
-title: "Don’t Panic: A Codebreaker's Guide to Getting Unstuck"
+title: "Don't Panic: A Codebreaker's Guide to Getting Unstuck"
 author: "Crackerjack" 
 date: last-modified
 date-format: "DD MM YYYY"
+include-in-header:
+  - text: |
+      <script>
+      let ticking = false;
+      document.addEventListener("scroll", () => {
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            const scrollTop = document.documentElement.scrollTop;
+            const height =
+              document.documentElement.scrollHeight -
+              document.documentElement.clientHeight;
+            const scroll = height > 0 ? scrollTop / height : 0;
+            document.body.style.setProperty("--scroll", scroll);
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+      </script>
 ---
 
 > *The Hitchhiker’s Guide to the Galaxy* is, among other things, a book designed to help its reader navigate a universe that is confusing, chaotic, and occasionally hostile. This guide has far more modest ambitions: to help you remain at least somewhat functional while staring at a block of ciphertext that appears to have been designed specifically to ruin your evening. If there is one thing worth remembering throughout the rest of this guide, it is the same advice printed in large, friendly letters on the cover of the *Hitchhiker’s Guide*: [DON'T PANIC](https://en.wikipedia.org/wiki/Phrases_from_The_Hitchhiker%27s_Guide_to_the_Galaxy#Don't_Panic)
