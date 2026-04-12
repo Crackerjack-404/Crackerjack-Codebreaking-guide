@@ -371,6 +371,14 @@ tbody tr:last-child td {
   color: var(--steel);
 }
 
+.sidebar nav[role="doc-toc"] ul > li > a.active {
+  padding-left: 0.75rem;
+  border-left: 3px solid var(--accent);
+  margin-left: -3px;
+}
+
+
+
 /* ── Scrollbar ────────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: var(--off-white); }
