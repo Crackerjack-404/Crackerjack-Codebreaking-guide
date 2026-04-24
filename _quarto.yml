@@ -59,4 +59,5 @@ format:
     toc: true
     number-sections: true
     search: true
+    respect-user-color-scheme: true
     page-navigation: true
