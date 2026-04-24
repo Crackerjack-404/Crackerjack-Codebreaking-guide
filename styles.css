@@ -41,6 +41,30 @@
   --epigraph-src: #9a9a9a;
 }
 
+/* ── Bootstrap variable bridge ───────────────────────────── */
+/* Maps our palette onto Bootstrap's own CSS vars so darkly/default
+   themes don't fight back against our colours                    */
+:root,
+[data-bs-theme="light"] {
+  --bs-body-bg:           #ffffff;
+  --bs-body-color:        #0a0c10;
+  --bs-secondary-bg:      #f2f2f2;
+  --bs-tertiary-bg:       #f2f2f2;
+  --bs-link-color:        #0a0c10;
+  --bs-link-hover-color:  #c8102e;
+  --bs-border-color:      rgba(10, 12, 16, 0.10);
+}
+
+[data-bs-theme="dark"] {
+  --bs-body-bg:           #0f1117;
+  --bs-body-color:        #eae6de;
+  --bs-secondary-bg:      #181c24;
+  --bs-tertiary-bg:       #181c24;
+  --bs-link-color:        #eae6de;
+  --bs-link-hover-color:  #e8294a;
+  --bs-border-color:      rgba(234, 230, 222, 0.10);
+}
+
 /* ── Reading progress bar ─────────────────────────────────── */
 body::before {
   content: "";
