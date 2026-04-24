@@ -1,14 +1,15 @@
 /* ============================================================
    INTELLIGENCE — Quarto Theme
    Space Grotesk + DM Mono
-   White base · Dark mode via [data-bs-theme="dark"]
+   White base · Dark mode via body.quarto-dark
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&display=swap');
 
 /* ── CSS Variables — Light ────────────────────────────────── */
 :root,
-[data-bs-theme="light"] {
+[data-bs-theme="light"],
+body.quarto-light {
   --ink:          #0a0c10;
   --paper:        #ffffff;
   --off-white:    #f2f2f2;
@@ -26,7 +27,7 @@
 }
 
 /* ── CSS Variables — Dark ─────────────────────────────────── */
-[data-bs-theme="dark"] {
+body.quarto-dark {
   --ink:          #eae6de;
   --paper:        #0f1117;
   --off-white:    #181c24;
@@ -45,7 +46,8 @@
 /* Maps our palette onto Bootstrap's own CSS vars so darkly/default
    themes don't fight back against our colours                    */
 :root,
-[data-bs-theme="light"] {
+[data-bs-theme="light"],
+body.quarto-light {
   --bs-body-bg:           #ffffff;
   --bs-body-color:        #0a0c10;
   --bs-secondary-bg:      #f2f2f2;
@@ -55,7 +57,7 @@
   --bs-border-color:      rgba(10, 12, 16, 0.10);
 }
 
-[data-bs-theme="dark"] {
+body.quarto-dark {
   --bs-body-bg:           #0f1117;
   --bs-body-color:        #eae6de;
   --bs-secondary-bg:      #181c24;
@@ -92,37 +94,37 @@ body {
 }
 
 /* Force dark mode palette on key structural elements */
-[data-bs-theme="dark"] .quarto-container,
-[data-bs-theme="dark"] #quarto-content,
-[data-bs-theme="dark"] .page-columns {
+body.quarto-dark .quarto-container,
+body.quarto-dark #quarto-content,
+body.quarto-dark .page-columns {
   background-color: var(--paper) !important;
   color: var(--ink) !important;
 }
 
-[data-bs-theme="dark"] #quarto-sidebar,
-[data-bs-theme="dark"] .sidebar {
+body.quarto-dark #quarto-sidebar,
+body.quarto-dark .sidebar {
   background-color: var(--off-white) !important;
 }
 
-[data-bs-theme="dark"] .nav-link,
-[data-bs-theme="dark"] .sidebar-item a,
-[data-bs-theme="dark"] .chapter-link {
+body.quarto-dark .nav-link,
+body.quarto-dark .sidebar-item a,
+body.quarto-dark .chapter-link {
   color: var(--steel) !important;
 }
 
-[data-bs-theme="dark"] a {
+body.quarto-dark a {
   color: var(--ink) !important;
   text-decoration-color: var(--accent) !important;
 }
 
-[data-bs-theme="dark"] a:hover {
+body.quarto-dark a:hover {
   color: var(--accent) !important;
 }
 
-[data-bs-theme="dark"] p,
-[data-bs-theme="dark"] li,
-[data-bs-theme="dark"] td,
-[data-bs-theme="dark"] th {
+body.quarto-dark p,
+body.quarto-dark li,
+body.quarto-dark td,
+body.quarto-dark th {
   color: var(--ink) !important;
 }
 
