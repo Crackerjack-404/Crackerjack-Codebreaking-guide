@@ -1,27 +1,44 @@
 /* ============================================================
    INTELLIGENCE — Quarto Theme
    Space Grotesk + DM Mono
-   Sleek, modern, classified-document aesthetic
+   White base · Dark mode via [data-bs-theme="dark"]
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&display=swap');
 
-/* ── CSS Variables ────────────────────────────────────────── */
-:root {
+/* ── CSS Variables — Light ────────────────────────────────── */
+:root,
+[data-bs-theme="light"] {
   --ink:          #0a0c10;
-  --paper:        #f4f1eb;
-  --off-white:    #e8e4dc;
+  --paper:        #ffffff;
+  --off-white:    #f2f2f2;
   --accent:       #c8102e;
-  --accent-dim:   rgba(200, 16, 46, 0.10);
+  --accent-dim:   rgba(200, 16, 46, 0.08);
   --steel:        #4a5568;
   --muted:        #7a8494;
-  --rule:         rgba(10, 12, 16, 0.12);
-  --code-bg:      #0a0c10;
+  --rule:         rgba(10, 12, 16, 0.10);
+  --code-bg:      #0f1117;
   --code-fg:      #e2ddd5;
-  --epigraph-fg:  #555;
+  --epigraph-fg:  #444;
   --epigraph-src: #777;
   --mono:         'DM Mono', monospace;
   --sans:         'Space Grotesk', sans-serif;
+}
+
+/* ── CSS Variables — Dark ─────────────────────────────────── */
+[data-bs-theme="dark"] {
+  --ink:          #eae6de;
+  --paper:        #0f1117;
+  --off-white:    #181c24;
+  --accent:       #e8294a;
+  --accent-dim:   rgba(232, 41, 74, 0.12);
+  --steel:        #8896aa;
+  --muted:        #5c6878;
+  --rule:         rgba(234, 230, 222, 0.10);
+  --code-bg:      #080a0e;
+  --code-fg:      #c9c4bb;
+  --epigraph-fg:  #b0b0b0;
+  --epigraph-src: #9a9a9a;
 }
 
 /* ── Reading progress bar ─────────────────────────────────── */
@@ -45,9 +62,8 @@ body {
   line-height: 1.85;
   color: var(--ink);
   background-color: var(--paper);
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 /* ── Images ───────────────────────────────────────────────── */
@@ -69,6 +85,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--ink);
   margin-top: 2.5rem;
   margin-bottom: 0.75rem;
+  transition: color 0.25s ease;
 }
 
 h1 {
@@ -125,6 +142,7 @@ code, kbd, samp, tt {
   border-radius: 2px;
   padding: 0.1em 0.35em;
   color: var(--accent);
+  transition: background 0.25s ease;
 }
 
 /* ── Code — block ─────────────────────────────────────────── */
@@ -136,6 +154,7 @@ pre {
   padding: 1.4rem 1.6rem;
   overflow-x: auto;
   position: relative;
+  transition: background 0.25s ease;
 }
 
 pre code {
@@ -154,17 +173,10 @@ blockquote {
   padding: 0.5rem 0 0.5rem 1.5rem;
   font-style: italic;
   color: var(--steel);
+  transition: color 0.25s ease;
 }
 
 /* ── Epigraph ─────────────────────────────────────────────── */
-/*
-   Usage in .qmd:
-   ::: {.epigraph}
-   *"The enemy knows the system."*
-
-   <footer>Claude Shannon, 1949</footer>
-   :::
-*/
 .epigraph {
   font-family: var(--mono);
   font-style: italic;
@@ -176,9 +188,9 @@ blockquote {
   position: relative;
   border: none;
   background: transparent;
+  transition: color 0.25s ease;
 }
 
-/* Fine double-rule left border */
 .epigraph::before {
   content: "";
   position: absolute;
@@ -188,6 +200,7 @@ blockquote {
   width: 1px;
   background: var(--ink);
   opacity: 0.2;
+  transition: background 0.25s ease;
 }
 
 .epigraph::after {
@@ -201,7 +214,6 @@ blockquote {
   opacity: 0.65;
 }
 
-/* Ghost quotation mark */
 .epigraph > p:first-child {
   position: relative;
 }
@@ -221,7 +233,6 @@ blockquote {
   pointer-events: none;
 }
 
-/* Attribution line */
 .epigraph footer {
   margin-top: 1rem;
   font-style: normal;
@@ -230,6 +241,7 @@ blockquote {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--epigraph-src);
+  transition: color 0.25s ease;
 }
 
 .epigraph footer::before {
@@ -250,6 +262,7 @@ table {
 thead tr {
   border-bottom: 2px solid var(--ink);
   background: var(--off-white);
+  transition: background 0.25s ease;
 }
 
 thead th {
@@ -282,6 +295,7 @@ tbody tr:last-child td {
 #quarto-sidebar {
   background: var(--off-white);
   border-right: 1px solid var(--rule);
+  transition: background 0.25s ease;
 }
 
 .sidebar-title {
@@ -328,6 +342,12 @@ tbody tr:last-child td {
   color: var(--accent);
 }
 
+.sidebar nav[role="doc-toc"] ul > li > a.active {
+  padding-left: 0.75rem;
+  border-left: 3px solid var(--accent);
+  margin-left: -3px;
+}
+
 /* ── Footer ───────────────────────────────────────────────── */
 .nav-footer {
   border-top: 1px solid var(--rule);
@@ -338,7 +358,6 @@ tbody tr:last-child td {
 }
 
 /* ── "CLASSIFIED" stamp ───────────────────────────────────── */
-/* Usage in .qmd:  ::: {.classified}  CLASSIFIED  :::        */
 .classified {
   display: inline-block;
   border: 2px solid var(--accent);
@@ -355,7 +374,6 @@ tbody tr:last-child td {
 }
 
 /* ── Redaction ────────────────────────────────────────────── */
-/* Usage in .qmd:  [REDACTED TEXT]{.redacted}                 */
 .redacted {
   background: var(--ink);
   color: var(--ink);
@@ -370,14 +388,6 @@ tbody tr:last-child td {
   background: var(--accent-dim);
   color: var(--steel);
 }
-
-.sidebar nav[role="doc-toc"] ul > li > a.active {
-  padding-left: 0.75rem;
-  border-left: 3px solid var(--accent);
-  margin-left: -3px;
-}
-
-
 
 /* ── Scrollbar ────────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
