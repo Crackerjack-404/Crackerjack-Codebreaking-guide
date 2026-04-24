@@ -55,15 +55,51 @@ body::before {
 }
 
 /* ── Base ─────────────────────────────────────────────────── */
+/* !important overrides Bootstrap default/darkly theme colours  */
 body {
-  font-family: var(--mono);
+  font-family: var(--mono) !important;
   font-weight: 300;
   font-size: 0.97rem;
   line-height: 1.85;
-  color: var(--ink);
-  background-color: var(--paper);
+  color: var(--ink) !important;
+  background-color: var(--paper) !important;
   -webkit-font-smoothing: antialiased;
   transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Force dark mode palette on key structural elements */
+[data-bs-theme="dark"] .quarto-container,
+[data-bs-theme="dark"] #quarto-content,
+[data-bs-theme="dark"] .page-columns {
+  background-color: var(--paper) !important;
+  color: var(--ink) !important;
+}
+
+[data-bs-theme="dark"] #quarto-sidebar,
+[data-bs-theme="dark"] .sidebar {
+  background-color: var(--off-white) !important;
+}
+
+[data-bs-theme="dark"] .nav-link,
+[data-bs-theme="dark"] .sidebar-item a,
+[data-bs-theme="dark"] .chapter-link {
+  color: var(--steel) !important;
+}
+
+[data-bs-theme="dark"] a {
+  color: var(--ink) !important;
+  text-decoration-color: var(--accent) !important;
+}
+
+[data-bs-theme="dark"] a:hover {
+  color: var(--accent) !important;
+}
+
+[data-bs-theme="dark"] p,
+[data-bs-theme="dark"] li,
+[data-bs-theme="dark"] td,
+[data-bs-theme="dark"] th {
+  color: var(--ink) !important;
 }
 
 /* ── Images ───────────────────────────────────────────────── */
