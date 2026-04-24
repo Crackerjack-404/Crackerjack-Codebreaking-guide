@@ -6,17 +6,17 @@
 %  Requires LuaLaTeX + fontspec
 % ============================================================
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{crackerjack}[2026/04/12 Crackerjack Codebreaking Guide Style]
+\ProvidesPackage{experiment}[]
 
 % ── Colour palette ──────────────────────────────────────────
 \RequirePackage{xcolor}
 \definecolor{ink}{HTML}{0a0c10}
-\definecolor{paper}{HTML}{f4f1eb}
-\definecolor{offwhite}{HTML}{e8e4dc}
+\definecolor{paper}{HTML}{ffffff}
+\definecolor{offwhite}{HTML}{f2f2f2}
 \definecolor{accent}{HTML}{c8102e}
 \definecolor{steel}{HTML}{4a5568}
 \definecolor{muted}{HTML}{7a8494}
-\definecolor{codebg}{HTML}{0a0c10}
+\definecolor{codebg}{HTML}{0f1117}
 \definecolor{codefg}{HTML}{e2ddd5}
 
 % ── Page geometry ────────────────────────────────────────────
@@ -126,7 +126,7 @@
 \RequirePackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\footnotesize\color{muted}Crackerjack}
+\fancyhead[L]{\footnotesize\color{muted} Crackerjack}
 \fancyhead[R]{\footnotesize\color{muted}\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\headrule}{{\color{accent}\hrule width\headwidth height 0.4pt}}
@@ -294,9 +294,10 @@
       {\color{ink}\rule{\linewidth}{0.8pt}}\par
       {\color{accent}\rule{\linewidth}{2.5pt}}\par
       \vspace{2.5cm}%
-      {\headingfont\color{steel} Crackerjack}\par
-      \vspace{0.4cm}%
+      {\normalsize\color{steel} Crackerjack}\par
       \vfill
+      {\footnotesize\color{muted}\ttfamily
+        DOCUMENT REF: CB-001\quad·\quad FOR COMPETITION USE}%
     \end{center}%
   \end{titlepage}%
 }
