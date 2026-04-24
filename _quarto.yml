@@ -35,6 +35,19 @@ format:
     include-in-header:
       - text: |
           <script>
+          /* Anti-FOUC: set theme before page renders */
+          (function() {
+            var stored = localStorage.getItem('quarto-color-scheme');
+            if (stored === 'dark') {
+              document.documentElement.setAttribute('data-bs-theme', 'dark');
+            } else if (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+              document.documentElement.setAttribute('data-bs-theme', 'dark');
+            } else {
+              document.documentElement.setAttribute('data-bs-theme', 'light');
+            }
+          })();
+
+          /* Scroll progress bar */
           let ticking = false;
           document.addEventListener("scroll", () => {
             if (!ticking) {
