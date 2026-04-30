@@ -1,10 +1,10 @@
 /* ============================================================
    INTELLIGENCE — Quarto Theme
-   Space Grotesk + DM Mono
+   Special Elite + DM Mono
    White base · Dark mode via body.quarto-dark
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&display=swap');
 
 /* ── CSS Variables — Light ────────────────────────────────── */
 :root,
@@ -23,7 +23,7 @@ body.quarto-light {
   --epigraph-fg:  #444;
   --epigraph-src: #777;
   --mono:         'DM Mono', monospace;
-  --sans:         'Space Grotesk', sans-serif;
+  --sans:         'Special Elite', serif;
 }
 
 /* ── CSS Variables — Dark ─────────────────────────────────── */
@@ -43,8 +43,6 @@ body.quarto-dark {
 }
 
 /* ── Bootstrap variable bridge ───────────────────────────── */
-/* Maps our palette onto Bootstrap's own CSS vars so darkly/default
-   themes don't fight back against our colours                    */
 :root,
 [data-bs-theme="light"],
 body.quarto-light {
@@ -81,12 +79,10 @@ body::before {
 }
 
 /* ── Base ─────────────────────────────────────────────────── */
-/* !important overrides Bootstrap default/darkly theme colours  */
 body {
-  font-family: var(--mono) !important;
-  font-weight: 300;
-  font-size: 0.97rem;
-  line-height: 1.85;
+  font-family: var(--sans) !important;
+  font-size: 1rem;
+  line-height: 1.9;
   color: var(--ink) !important;
   background-color: var(--paper) !important;
   -webkit-font-smoothing: antialiased;
@@ -141,9 +137,9 @@ figure {
 /* ── Headings ─────────────────────────────────────────────── */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--sans);
-  font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
   color: var(--ink);
   margin-top: 2.5rem;
   margin-bottom: 0.75rem;
@@ -151,28 +147,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2rem;
-  letter-spacing: -0.04em;
+  font-size: 2.2rem;
   border-bottom: 3px solid var(--ink);
   padding-bottom: 0.4rem;
 }
 
 h2 {
   font-size: 1.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-weight: 700;
   border-left: 3px solid var(--accent);
   padding-left: 0.75rem;
   margin-left: -0.78rem;
 }
 
 h3 {
-  font-size: 0.85rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-size: 1rem;
   color: var(--muted);
-  font-weight: 700;
 }
 
 /* ── Links ────────────────────────────────────────────────── */
@@ -240,10 +229,10 @@ blockquote {
 
 /* ── Epigraph ─────────────────────────────────────────────── */
 .epigraph {
-  font-family: var(--mono);
+  font-family: var(--sans);
   font-style: italic;
-  font-size: 1.05rem;
-  line-height: 1.75;
+  font-size: 1.1rem;
+  line-height: 1.8;
   color: var(--epigraph-fg);
   margin: 3rem 0;
   padding: 1.5rem 2rem 1.5rem 1.8rem;
@@ -284,7 +273,7 @@ blockquote {
   content: "\201C";
   font-family: var(--sans);
   font-size: 4.5rem;
-  font-weight: 800;
+  font-weight: 400;
   font-style: normal;
   color: var(--accent);
   opacity: 0.12;
@@ -298,10 +287,9 @@ blockquote {
 .epigraph footer {
   margin-top: 1rem;
   font-style: normal;
-  font-size: 0.78rem;
-  font-family: var(--mono);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-family: var(--sans);
+  letter-spacing: 0.05em;
   color: var(--epigraph-src);
   transition: color 0.25s ease;
 }
@@ -316,8 +304,8 @@ blockquote {
 table {
   width: 100%;
   border-collapse: collapse;
-  font-family: var(--mono);
-  font-size: 0.88rem;
+  font-family: var(--sans);
+  font-size: 0.95rem;
   margin: 1.5rem 0;
 }
 
@@ -329,10 +317,9 @@ thead tr {
 
 thead th {
   font-family: var(--sans);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  font-size: 0.9rem;
   padding: 0.6rem 0.9rem;
   text-align: left;
 }
@@ -362,16 +349,15 @@ tbody tr:last-child td {
 
 .sidebar-title {
   font-family: var(--sans) !important;
-  font-weight: 800 !important;
-  letter-spacing: -0.02em !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.02em !important;
 }
 
 .sidebar-item a {
-  font-family: var(--mono);
-  font-size: 0.85rem;
+  font-family: var(--sans);
+  font-size: 0.9rem;
   text-decoration: none;
   color: var(--steel);
-  letter-spacing: 0.02em;
   transition: color 0.15s;
 }
 
@@ -381,14 +367,13 @@ tbody tr:last-child td {
 
 .sidebar-item.active > a {
   color: var(--ink);
-  font-weight: 500;
 }
 
 /* ── Table of Contents ────────────────────────────────────── */
 #TOC {
   border-left: 1px solid var(--rule);
   padding-left: 1.2rem;
-  font-size: 0.82rem;
+  font-size: 0.85rem;
 }
 
 #TOC a {
@@ -397,6 +382,7 @@ tbody tr:last-child td {
   display: block;
   padding: 0.15rem 0;
   transition: color 0.15s;
+  font-family: var(--sans);
 }
 
 #TOC a:hover,
@@ -413,26 +399,10 @@ tbody tr:last-child td {
 /* ── Footer ───────────────────────────────────────────────── */
 .nav-footer {
   border-top: 1px solid var(--rule);
-  font-family: var(--mono);
-  font-size: 0.78rem;
-  color: var(--muted);
-  letter-spacing: 0.04em;
-}
-
-/* ── "CLASSIFIED" stamp ───────────────────────────────────── */
-.classified {
-  display: inline-block;
-  border: 2px solid var(--accent);
-  color: var(--accent);
   font-family: var(--sans);
-  font-weight: 800;
-  font-size: 0.72rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  padding: 0.15rem 0.6rem;
-  opacity: 0.85;
-  transform: rotate(-1.5deg);
-  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  letter-spacing: 0.02em;
 }
 
 /* ── Redaction ────────────────────────────────────────────── */
