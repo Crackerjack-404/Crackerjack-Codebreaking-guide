@@ -1,10 +1,10 @@
 /* ============================================================
    INTELLIGENCE — Quarto Theme
-   Special Elite + DM Mono
+   Special Elite + Courier Prime
    White base · Dark mode via body.quarto-dark
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap');
 
 /* ── CSS Variables — Light ────────────────────────────────── */
 :root,
@@ -22,8 +22,9 @@ body.quarto-light {
   --code-fg:      #e2ddd5;
   --epigraph-fg:  #444;
   --epigraph-src: #777;
-  --mono:         'DM Mono', monospace;
+  --mono:         'Courier Prime', monospace;
   --sans:         'Special Elite', serif;
+  --body:         'Courier Prime', monospace;
 }
 
 /* ── CSS Variables — Dark ─────────────────────────────────── */
@@ -80,7 +81,7 @@ body::before {
 
 /* ── Base ─────────────────────────────────────────────────── */
 body {
-  font-family: var(--sans) !important;
+  font-family: var(--body) !important;
   font-size: 1rem;
   line-height: 1.9;
   color: var(--ink) !important;
