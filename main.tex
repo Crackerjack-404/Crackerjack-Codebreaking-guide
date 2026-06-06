@@ -8,8 +8,9 @@
 \usepackage{mathtools}
 \usepackage{verbatim}
 \usepackage{appendix}
-\usepackage{cancel}
 \usepackage{derivative}
+\usepackage{etoolbox}
+\patchcmd{\chapter}{\clearpage}{}{}{}
 
 \newcommand{\mychapter}[2]{%
     \setcounter{chapter}{#1}%
@@ -54,19 +55,25 @@ Codebreaking, especially with something like the National Cipher Challenge, is v
 Most of the difficulty in codebreaking comes from uncertainty like not knowing where to start, whether you're making progress, or whether the idea you're attached to is actually helping.
 
 In short, if you've ever stared at a block of ciphertext and thought to yourself, \textit{`I have no idea what I'm doing'}, then you're in the right place.
+\newpage
 
 \tableofcontents
 \thispagestyle{plain}
 
+\newpage
 
 \mychapter{1}{Being Stuck}
 \input{tex/01- Being Stuck}
+
+\newpage
 
 \mychapter{2}{Redefining Progress}
 \input{tex/02- Redefining Progress}
 
 \mychapter{3}{The Starting Line}
 \input{tex/03- The Starting Line}
+
+\newpage
 
 \mychapter{4}{Abandoning Ideas}
 \input{tex/04- Abandoning Ideas}
@@ -76,6 +83,8 @@ In short, if you've ever stared at a block of ciphertext and thought to yourself
 
 \mychapter{6}{Teamwork}
 \input{tex/06- Teamwork}
+
+\newpage
 
 \mychapter{7}{Tools and Resources}
 \input{tex/07- Tools and Resources}
